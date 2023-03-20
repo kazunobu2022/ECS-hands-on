@@ -1,42 +1,81 @@
-    1  sudo yum update
-    2  sudo yum install -y docker
-    3  sudo systemctl start docker
-    4  sudo usermod -a -G docker ec2-user
-    5  sudo systemctl enable docker
-    6  sudo curl -L https://github.com/docker/compose/releases/download/1.28.5/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-    7  sudo chmod +x /usr/local/bin/docker-compose
-    8  sudo mkdir docker
-    9  cd docker/
-   10  sudo vi dockerfile
-   11  sudo rm dockerfile 
-   12  sudo vi Dockerfile
-   13  mkdir src
-   14  sudo mkdir src
-   15  cd src/
-   16  sudo vi index.html
-   17  cd ..
-   18  sudo su
-   19  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
-   20  sudo su
-   21  ls
-   22  aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com
-   23  sudo su
-   24  aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com
-   25  docker build -t hello-world .
-   26  sudo su
-   27  ls
-   28  cd docker/
-   29  ls
-   30  sudo vi src/
-   31  ls
-   32  cd src/
-   33  ls
-   34  sudo vi index.html 
-   35  aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com
-   36  cd ..
-   37  ls
-   38  docker build -t hello-world .
-   39  docker tag hello-world:latest 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
-   40  docker push 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
-   41  history 
-   42  history > command.txt
+  sudo yum update
+  sudo yum install -y docker
+  sudo systemctl start docker
+  sudo usermod -a -G docker ec2-user
+  sudo systemctl enable docker
+  sudo curl -L https://github.com/docker/compose/releases/download/1.28.5/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+  sudo chmod +x /usr/local/bin/docker-compose
+  sudo mkdir docker
+  cd docker/
+  sudo vi dockerfile
+  sudo rm dockerfile 
+  sudo vi Dockerfile
+  mkdir src
+  sudo mkdir src
+  cd src/
+  sudo vi index.html
+  cd ..
+  sudo su
+  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
+  sudo su
+  ls
+  aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com
+  sudo su
+  aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com
+  docker build -t hello-world .
+  sudo su
+  ls
+  cd docker/
+  ls
+  sudo vi src/
+  ls
+  cd src/
+  ls
+  sudo vi index.html 
+  aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com
+  cd ..
+  ls
+  docker build -t hello-world .
+  docker tag hello-world:latest 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+  docker push 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+  history 
+  history > command.txt
+  sudo su
+  git clone  Authentication failed for 'https://git-codecommit.ap-northeast-1.amazonaws.com/v1/repos/ecs-hands-on/'
+  it config --global user.name "takakabe"
+  git config --global user.name "takakabe"
+  git config --global user.email kabegiwablog@example.com
+  ssh-keygen -t rsa
+  cd ~/.ssh/
+  ks
+  ls
+  cat id_rsa.pub 
+  cd ~/
+  ls
+  cd ECS-hands-on/
+  git push
+  git add -A
+  git config --global --add safe.directory /home/ec2-user/ECS-hands-on
+  git add -A
+  sudo su
+  ls
+  cd dir/
+  ls
+  cut -c 5-99 > test
+  cat command.txt | cut -c 5-99 
+  cat command.txt | cut -c 6-99 
+  cat command.txt 
+  cat command.txt | cut -c 6-9999
+  cat command.txt | cut -c 6-9999 > command.txt 
+  cat command.txt 
+  ls
+  cat command.txt 
+  cd te
+  cat test 
+  cat command.txt 
+  ls
+  cat sudocommand.txt 
+  ls
+  history 
+  history 1-100
+  history > command.txt 
