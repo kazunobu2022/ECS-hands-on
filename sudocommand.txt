@@ -1,33 +1,10 @@
-  docker build -t hello-world .
-  docker run -d -p 8080:80 --name hello-world-run hello-world
-  docker ps
-  curl localhost:8080
-  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
-  ls
-  cd docker/
-  cd ..
-  exit
-  cd docker/
-  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
-  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
-  exit
-  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
-  cd docker/
-  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
-  docker tag hello-world:latest 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
-  docker build -t hello-world .
-  docker tag hello-world:latest 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
-  docker push 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
-  aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com
-  docker build -t hello-world .
-  docker build -t hello-world .
-  docker tag hello-world:latest 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
-  docker push 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
-  exit
-  exit
-  cd docker/
-  docker build -t hello-world .
-  docker tag hello-world:latest 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
-  docker push 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
-  history 
-  history > sudocommand.txt
+docker build -t hello-world .
+docker run -d -p 8080:80 --name hello-world-run hello-world
+docker ps
+curl localhost:8080
+cd docker/
+aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com
+docker build -t hello-world .
+docker tag hello-world:latest 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+docker push 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+exit
