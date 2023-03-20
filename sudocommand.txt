@@ -1,0 +1,33 @@
+    1  docker build -t hello-world .
+    2  docker run -d -p 8080:80 --name hello-world-run hello-world
+    3  docker ps
+    4  curl localhost:8080
+    5  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
+    6  ls
+    7  cd docker/
+    8  cd ..
+    9  exit
+   10  cd docker/
+   11  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
+   12  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
+   13  exit
+   14  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
+   15  cd docker/
+   16  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
+   17  docker tag hello-world:latest 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+   18  docker build -t hello-world .
+   19  docker tag hello-world:latest 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+   20  docker push 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+   21  aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com
+   22  docker build -t hello-world .
+   23  docker build -t hello-world .
+   24  docker tag hello-world:latest 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+   25  docker push 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+   26  exit
+   27  exit
+   28  cd docker/
+   29  docker build -t hello-world .
+   30  docker tag hello-world:latest 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+   31  docker push 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+   32  history 
+   33  history > sudocommand.txt

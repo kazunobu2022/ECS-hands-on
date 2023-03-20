@@ -1,0 +1,42 @@
+    1  sudo yum update
+    2  sudo yum install -y docker
+    3  sudo systemctl start docker
+    4  sudo usermod -a -G docker ec2-user
+    5  sudo systemctl enable docker
+    6  sudo curl -L https://github.com/docker/compose/releases/download/1.28.5/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+    7  sudo chmod +x /usr/local/bin/docker-compose
+    8  sudo mkdir docker
+    9  cd docker/
+   10  sudo vi dockerfile
+   11  sudo rm dockerfile 
+   12  sudo vi Dockerfile
+   13  mkdir src
+   14  sudo mkdir src
+   15  cd src/
+   16  sudo vi index.html
+   17  cd ..
+   18  sudo su
+   19  docker build -t 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world/hello-world:latest .
+   20  sudo su
+   21  ls
+   22  aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com
+   23  sudo su
+   24  aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com
+   25  docker build -t hello-world .
+   26  sudo su
+   27  ls
+   28  cd docker/
+   29  ls
+   30  sudo vi src/
+   31  ls
+   32  cd src/
+   33  ls
+   34  sudo vi index.html 
+   35  aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com
+   36  cd ..
+   37  ls
+   38  docker build -t hello-world .
+   39  docker tag hello-world:latest 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+   40  docker push 744195504551.dkr.ecr.ap-northeast-1.amazonaws.com/hello-world:latest
+   41  history 
+   42  history > command.txt
